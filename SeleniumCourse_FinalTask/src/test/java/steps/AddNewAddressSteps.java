@@ -1,8 +1,8 @@
-package Steps;
+package steps;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,23 +10,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class AddNewAddressSteps {
 
     private WebDriver driver;
 
-    @BeforeEach
-    public void beforeEach() {
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
-        driver.manage().window().maximize();
-    }
-
     @When("^Browser opened Main Page (.*)$")
     public void browserOpenedMainPage(String mainPAge) {
-
         System.setProperty("webdriver.chrome.driver",
                 "src/main/resources/chromedriver.exe");
         this.driver = new ChromeDriver();
+        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+        this.driver.manage().window().maximize();
         this.driver.get(mainPAge);
 
     }
@@ -59,61 +55,67 @@ public class AddNewAddressSteps {
     }
 
     @And("^User clicked button create new address$")
-    public void userClickedButtonCreateNewAddress() {
+    public void userClickedButtonNewAddress() {
 
-        WebElement createNewAddress = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/a/span"));
+        WebElement createNewAddress = driver.findElement(By.xpath("/html/body/main/section/div/div/section/section/div[4]/a"));
         createNewAddress.click();
     }
 
 
-    @And("^User filled out address details : (.*), (.*), (.*),(.*),(.*) and clicked saveButton$")
-    public void userFilledOutAddressDetailsAliasAddressPostalCodeCountryPhoneAndClickedSaveButton(String alias, String address, String city, String postalCode, String phone) {
+    @And("^User filled out address details (.*), (.*), (.*), (.*), (.*) and clicked saveButton$")
+    public void userFilledOutAddressDetails(String alias, String address, String city, String postalCode, String phone) {
 
         WebElement aliasInput = driver.findElement(By.name("alias"));
         aliasInput.click();
+        aliasInput.clear();
         aliasInput.sendKeys(alias);
 
         WebElement addressInput = driver.findElement(By.name("address1"));
         addressInput.click();
+        addressInput.clear();
         addressInput.sendKeys(address);
 
         WebElement cityInput = driver.findElement(By.name("city"));
         cityInput.click();
+        cityInput.clear();
         cityInput.sendKeys(city);
 
         WebElement postalCodeInput = driver.findElement(By.name("postcode"));
         postalCodeInput.click();
+        postalCodeInput.clear();
         postalCodeInput.sendKeys(postalCode);
 
         WebElement phoneInput = driver.findElement(By.name("phone"));
         phoneInput.click();
+        phoneInput.clear();
         phoneInput.sendKeys(phone);
 
         WebElement saveButton = driver.findElement(By.cssSelector("button.btn.btn-primary.float-xs-right"));
         saveButton.click();
+
     }
 
-//    @Then("^User sees a confirmation message \"([^\"]*)\"$")
-//    public void userSeesAConfirmationMessageAdded() {
-//
-//        WebElement message = driver.findElement(By.xpath("//*[@id=\"notifications\"]/div/article"));
-//        message.getText();
-//    }
+    @Then("^Added address information should be (.*), (.*), (.*), (.*), (.*) and sees message confirmed \"([^\"]*)\"$")
+    public void addedAddressInformationShouldBe(String alias, String address, String city, String postalCode, String phone) {
 
-    @And("^User clicked button delete$")
-    public void clickedButtonDelete() {
+        WebElement addressInfo = driver.findElement(By.xpath("//div[@class = 'address-body']"));
+        addressInfo.getText();
+        String successInfo = addressInfo.getText();
+        assertEquals(alias + "\n" + "Jan Jankowski\n" + address + "\n" + city + "\n" + postalCode + "\n" + "United Kingdom\n" + phone, successInfo);
+    }
 
-        WebElement deleteButton = driver.findElement(By.cssSelector("#address-22737 > div.address-footer > a:nth-child(2)"));
+    @And("^User clicked delete Button and sees message confirmed \"([^\"]*)\"$")
+    public void userClickedDeleteButtonAndSeesMessageConfirmed(String string) {
+
+        WebElement deleteButton = driver.findElement(By.xpath("/html/body/main/section/div/div/section/section/div[1]/article/div[2]/a[2]"));
         deleteButton.click();
+        WebElement messageConfirm = driver.findElement(By.xpath("//*[@id=\"notifications\"]/div/article/ul/li"));
+        messageConfirm.getText();
+        assertEquals(string, messageConfirm.getText());
 
     }
 
-//    @Then("^User sees a confirmation message \"([^\"]*)\"$")
-//    public void userSeesAConfirmationMessageDeleted() {
-//
-//        WebElement message = driver.findElement(By.xpath("//*[@id=\"notifications\"]/div/article"));
-//        message.getText();
-//    }
+
 }
 
 
