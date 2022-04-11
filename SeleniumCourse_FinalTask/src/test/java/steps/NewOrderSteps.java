@@ -2,7 +2,9 @@ package steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -77,43 +79,34 @@ public class NewOrderSteps {
         shoppingCartPage.clickProceededToCheckout();
 
     }
+
+    @And("^User confirms address alias (.*)$")
+    public void addressConfirmation(String alias) {
+        OrderPage orderPage = new OrderPage(driver);
+
+        Assert.assertEquals(alias, orderPage.getAddressAlias());
+
+    }
+
+    @And("^User choose delivery method Pick up in store, choose pay by Check and confirms order$")
+    public void paymentAndDeliveryMethods() {
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.clickContinueButton();
+
+        OrderPage orderPageDelivery = new OrderPage(driver);
+        orderPageDelivery.clickDelivery();
+
+        OrderPage orderPagePayment = new OrderPage(driver);
+        orderPagePayment.paymentConfirmation();
+    }
+
+    @Then("^User sees order confirmation$")
+    public void orderConfirmation() {
+        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
+
+        Assert.assertEquals("\uE876YOUR ORDER IS CONFIRMED", orderConfirmationPage.getOrderConfirmation());
+    }
 }
-//    @And("^User confirms address alias (.*)$")
-//    public void addressConfirmation(String alias) {
-//        OrderPage orderPage = new OrderPage(driver);
-//
-//        Assert.assertEquals(alias, orderPage.getAddressAlias());
-//
-//    }
-//
-//    @And("user choose delivery method Pick up in store, choose pay by Check and confirms order")
-//    public void paymentAndDeliveryMethods() {
-//        OrderPage orderPage = new OrderPage(driver);
-//        orderPage.clickContinueButton();
-//
-//        OrderPage orderPageDelivery = new OrderPage(driver);
-//
-//        //wait dla radio buttonów dostawy
-//        WebDriverWait wait = new WebDriverWait(driver, 20);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"js-delivery\"]/div/div[1]/div[1]/div/span/span")));
-//
-//        orderPageDelivery.clickDelivery();
-//
-//        OrderPage orderPagePayment = new OrderPage(driver);
-//
-//        //wait dla płatności
-//        //WebDriverWait anotherWait = new WebDriverWait(driver, 20);
-//        //anotherWait.until(ExpectedConditions.elementToBeClickable (By.id("payment-option-1")));
-//        orderPagePayment.paymentConfirmation();
-//    }
-//
-//    @Then("user sees order confirmation")
-//    public void orderConfirmation() {
-//        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
-//
-//        Assert.assertEquals("\uE876YOUR ORDER IS CONFIRMED", orderConfirmationPage.getOrderConfirmation());
-//    }
-//
 //    @And("screenshot is taken")
 //    public void takeScreenShoot() throws Exception {
 //        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
