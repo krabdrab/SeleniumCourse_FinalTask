@@ -9,9 +9,9 @@ Feature: New order
     And User confirms address alias <alias>
     And User choose delivery method Pick up in store, choose pay by Check and confirms order
     Then User sees order confirmation
-#    And Screenshot is taken
-#    And User goes back to account page and goes to order history
-#    And Browser is closed
+    And Screenshot is taken
+    And User goes back to account page and goes to order history
+    And Browser is closed
     Examples:
-      | email                   | firstname | lastname  | password  | alias |
-      | jan.jakowski@Silesia.pl | Jan       | Jankowski | 123!@#Qwe | Mis   |
+      | email                   | password  | alias |  |  |
+      | jan.jakowski@Silesia.pl | 123!@#Qwe | Mr    |  |  |

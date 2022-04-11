@@ -7,14 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ConfirmationPopUpPage {
     private static WebDriver driver;
+    @FindBy(css = "[class=\"btn btn-primary\"]")
+    private WebElement toCheckoutButton;
+
     public ConfirmationPopUpPage(WebDriver driver) {
         ConfirmationPopUpPage.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    @FindBy(css = "[class=\"btn btn-primary\"]")
-    private WebElement toCheckoutButton;
 
-    public void goToCheckout(){
+    public void goToCheckout() {
 
         toCheckoutButton.click();
     }

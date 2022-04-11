@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: pages.TestSupportTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 33.058 sec <<< FAILURE!
+Adding new order(New order)  Time elapsed: 10.283 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step 'Browser is closed' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("Browser is closed")
+public void browser_is_closed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

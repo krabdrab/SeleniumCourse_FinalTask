@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="4" failures="0" name="pages.TestSupportTest" time="31.837" errors="1" skipped="0">
+  <properties>
+    <property name="idea.version" value="2021.3.3"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="F:\Projects\SeleniumCourse_FinalTask"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="PL"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="F:\Projects\SeleniumCourse_FinalTask"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.2+8-LTS-86"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\mskoc\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Python37\;D:\Python37\DLLs\;D:\Python37\Scripts\;D:\Python37\Tools\;D:\Python37\Tools\ninja\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk-17.0.2\bin;C:\Program Files\Git\cmd;C:\Ruby31-x64\bin;C:\Python\Python310\Scripts\;C:\Python\Python310\;C:\Users\mskoc\AppData\Local\Microsoft\WindowsApps;C:\Users\mskoc\AppData\Local\GitHubDesktop\bin;C:\Users\mskoc\AppData\Local\atom\bin;C:\Users\mskoc\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\mskoc"/>
+    <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="ms.koczan"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.3.3 test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.2"/>
+    <property name="user.language" value="pl"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.2"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Add new address to ready user profile" name="Log in to user account on https://mystore-testlab.coderslab.pl/ #1" time="8.762"/>
+  <testcase classname="Add new address to ready user profile" name="Log in to user account on https://mystore-testlab.coderslab.pl/ #2" time="6.574"/>
+  <testcase classname="Add new address to ready user profile" name="Log in to user account on https://mystore-testlab.coderslab.pl/ #3" time="6.218"/>
+  <testcase classname="New order" name="Adding new order" time="10.283">
+    <error message="The step &apos;Browser is closed&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Browser is closed&quot;)
+public void browser_is_closed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step &apos;Browser is closed&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;Browser is closed&quot;)
+public void browser_is_closed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</error>
+    <system-out>
+Scenario Outline: Adding new order                                                             &amp;#27;[90m# src/Cucumber/Features/NewOrder.feature:17&amp;#27;[0m
+  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mUser opened&amp;#27;[0m&amp;#27;[32m&amp;#27;[1m https://mystore-testlab.coderslab.pl/&amp;#27;[0m&amp;#27;[32m page&amp;#27;[0m                                 &amp;#27;[90m# steps.NewOrderSteps.openMyStore(java.lang.String)&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mUser clicks on SingIn button&amp;#27;[0m                                                             &amp;#27;[90m# steps.NewOrderSteps.clickSingIn()&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mUser enters email &amp;#27;[0m&amp;#27;[32m&amp;#27;[1mjan.jakowski@Silesia.pl&amp;#27;[0m&amp;#27;[32m and password &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m123!@#Qwe&amp;#27;[0m&amp;#27;[32m and click SignIn button&amp;#27;[0m &amp;#27;[90m# steps.NewOrderSteps.enterLoginAndPassword(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mUser finds Hummingbird Printed Sweater&amp;#27;[0m                                                  &amp;#27;[90m# steps.NewOrderSteps.userFindsProduct()&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mUser choose &amp;#27;[0m&amp;#27;[32m&amp;#27;[1msize&amp;#27;[0m&amp;#27;[32m, &amp;#27;[0m&amp;#27;[32m&amp;#27;[1mquantity&amp;#27;[0m&amp;#27;[32m, add product to the basket and goes to checkout&amp;#27;[0m               &amp;#27;[90m# steps.NewOrderSteps.addProduct(java.lang.String,java.lang.String)&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mUser confirms address alias &amp;#27;[0m&amp;#27;[32m&amp;#27;[1mMr&amp;#27;[0m                                                           &amp;#27;[90m# steps.NewOrderSteps.addressConfirmation(java.lang.String)&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mUser choose delivery method Pick up in store, choose pay by Check and confirms order&amp;#27;[0m     &amp;#27;[90m# steps.NewOrderSteps.paymentAndDeliveryMethods()&amp;#27;[0m
+  &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mUser sees order confirmation&amp;#27;[0m                                                            &amp;#27;[90m# steps.NewOrderSteps.orderConfirmation()&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mScreenshot is taken&amp;#27;[0m                                                                      &amp;#27;[90m# steps.NewOrderSteps.takeScreenShoot()&amp;#27;[0m
+  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mUser goes back to account page and goes to order history&amp;#27;[0m                                 &amp;#27;[90m# steps.NewOrderSteps.toOrderHistory()&amp;#27;[0m
+  &amp;#27;[33mAnd &amp;#27;[0m&amp;#27;[33mBrowser is closed&amp;#27;[0m
+</system-out>
+    <system-err>Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 58665
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1649677065.417][WARNING]: This version of ChromeDriver has not been tested with Chrome version 100.
+kwi 11, 2022 1:37:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+kwi 11, 2022 1:37:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 100, so returning the closest version found: 99
+kwi 11, 2022 1:37:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 100 of 99
+</system-err>
+  </testcase>
+</testsuite>

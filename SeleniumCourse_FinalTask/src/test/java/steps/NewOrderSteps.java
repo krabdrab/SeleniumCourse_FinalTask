@@ -106,28 +106,28 @@ public class NewOrderSteps {
 
         Assert.assertEquals("\uE876YOUR ORDER IS CONFIRMED", orderConfirmationPage.getOrderConfirmation());
     }
-}
-//    @And("screenshot is taken")
-//    public void takeScreenShoot() throws Exception {
-//        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
-//
-//        //screenshot test.png
-//        orderConfirmationPage.takeSnapShot(driver, "screenshot//test.png");
-//
-//    }
-//
-//    @And("user goes back to account page and goes to order history")
-//    public void toOrderHistory(){
-//        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
-//        orderConfirmationPage.clickMyAccount();
-//
-//        MyAccountPage myAccountPage = new MyAccountPage(driver);
-//        myAccountPage.toOrderHistory();
-//    }
-//
-//    @And("browser is closed")
-//    public void browserClosing() {
-//        driver.quit();
-//    }
 
-//}
+    @And("^Screenshot is taken$")
+    public void takeScreenShoot() throws Exception {
+        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
+
+        //screenshot test.png
+        OrderConfirmationPage.takeSnapShot(driver, "C://screenshot//test.png");
+
+    }
+
+    @And("^User goes back to account page and goes to order history$")
+    public void toOrderHistory() {
+        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
+        orderConfirmationPage.clickMyAccount();
+
+        MyAccountPage myAccountPage = new MyAccountPage(driver);
+        myAccountPage.toOrderHistory();
+    }
+
+    @And("^Browser is closed$")
+    public void browserClosing() {
+        driver.quit();
+    }
+
+}

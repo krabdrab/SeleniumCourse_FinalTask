@@ -8,33 +8,26 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OrderPage {
     private static WebDriver driver;
+    //elementy do potwierdzenia zakupu
+    @FindBy(css = "[name=\"confirm-addresses\"]")
+    private WebElement continueButton;
+    @FindBy(css = "[#js-delivery > div > div.delivery-options > div:nth-child(1) > div > span > span]")
+    private WebElement deliveryOptionRadio;
+    @FindBy(css = "[name=\"confirmDeliveryOption\"]")
+    private WebElement deliveryConfirmationButton;
+    @FindBy(id = "payment-option-1")
+    private WebElement paymentByCheckRadio;
+    @FindBy(id = "conditions_to_approve[terms-and-conditions]")
+    private WebElement termsAndConditionsCheck;
+    @FindBy(id = "payment-confirmation")
+    private WebElement paymentConfirmationButton;
+    @FindBy(css = "[class=\"address-alias h4\"]")
+    private WebElement aliasInformation;
 
     public OrderPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-    //elementy do potwierdzenia zakupu
-    @FindBy(css = "[name=\"confirm-addresses\"]")
-    private WebElement continueButton;
-
-    //@FindBy(css = "[#js-delivery > div > div.delivery-options > div:nth-child(1) > div > span > span]")
-    //private WebElement deliveryOptionRadio;
-
-    @FindBy(css = "[name=\"confirmDeliveryOption\"]")
-    private WebElement deliveryConfirmationButton;
-
-    @FindBy(id ="payment-option-1")
-    private WebElement paymentByCheckRadio;
-
-    @FindBy(id="conditions_to_approve[terms-and-conditions]")
-    private WebElement termsAndConditionsCheck;
-
-    @FindBy(id = "payment-confirmation")
-    private WebElement paymentConfirmationButton;
-
-    @FindBy(css = "[class=\"address-alias h4\"]")
-    private WebElement aliasInformation;
 
     //metody do potwierdzenia zakupu
     public void clickContinueButton() {
@@ -54,7 +47,7 @@ public class OrderPage {
 
     }
 
-    public String getAddressAlias(){
+    public String getAddressAlias() {
         return aliasInformation.getText();
     }
 }
